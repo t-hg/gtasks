@@ -171,5 +171,7 @@ func main() {
 		if err := srv.Tasks.Delete(tasklistId, taskId).Do(); err != nil {
 			log.Fatalf("Clear Delete: %v", err)
 		}
+	default:
+		log.Fatalf("Unknown command: %v", cmd)
 	}
 }
