@@ -171,9 +171,5 @@ func main() {
 		if err := srv.Tasks.Delete(tasklistId, taskId).Do(); err != nil {
 			log.Fatalf("Clear Delete: %v", err)
 		}
-	case "clear":
-		if err := srv.Tasks.Clear(tasklistId).Do(); err != nil {
-			log.Fatalf("Clear failed: %v", err)
-		}
 	}
 }
