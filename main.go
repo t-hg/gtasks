@@ -135,7 +135,7 @@ func main() {
 			log.Fatalf("Could not add task: %v", err)
 		}
 	case "list":
-		tasks, err := srv.Tasks.List(tasklistId).Do()
+		tasks, err := srv.Tasks.List(tasklistId).ShowHidden(true).Do()
 		if err != nil {
 			log.Fatalf("Could not list tasklist items: %v", err)
 		}
